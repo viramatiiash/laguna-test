@@ -1,0 +1,35 @@
+// ! Colors
+$c-default-dark: #231d4f;
+$c-btn-popular: #403879;
+$c-default-bright: #bb6bd9;
+$c-hover: #a847cc;
+$c-light: #f5f5fa;
+$c-white: #fff;
+$c-white-bg: rgba(255, 255, 255, 0.64);
+$c-beige: #f2dad5;
+$c-gray-text: #848199;
+$c-tick: #7b72c1;
+$c-tick-bg: rgba(82, 67, 194, 0.15);
+$c-icon-bg: rgba(255, 255, 255, 0.1);
+
+// ? Box shadow
+$box-shadow: rgba(82, 67, 194, 0.3);
+
+// ? Gradient
+$linear-gradient: #f5f5fa, #f2dad5, #a0abd6;
+
+// ! Font
+// ? Font family
+$ff-main: 'Poppins', sans-serif;
+
+// ? Font weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+// ! Transition
+$transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+// ! Border radius
+$border-radius: 25px;

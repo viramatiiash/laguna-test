@@ -1,0 +1,29 @@
+@mixin buttonBright {
+  background-color: $c-default-bright;
+  transition: $transition;
+  border: none;
+  border-radius: 25px;
+  color: $c-white;
+  font-weight: $fw-medium;
+  line-height: 18px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $c-hover;
+  }
+}
+
+@mixin buttonDark {
+  background-color: $c-default-dark;
+  transition: $transition;
+  border: none;
+  border-radius: 25px;
+  color: $c-white;
+  font-weight: $fw-medium;
+  line-height: 18px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $c-hover;
+  }
+}

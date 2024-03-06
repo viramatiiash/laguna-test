@@ -1,0 +1,366 @@
+.main__title {
+  font-size: 40px;
+  color: $c-default-dark;
+  font-weight: $fw-regular;
+  margin-bottom: 25px;
+
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
+}
+
+.plans__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+
+.plans__description {
+  width: 100%;
+  max-width: 590px;
+  color: $c-gray-text;
+  font-size: 18px;
+  font-weight: $fw-medium;
+  line-height: 26px;
+
+  @media screen and (max-width: 900px) {
+    margin-bottom: 40px;
+  }
+}
+
+// ! Tabs
+.tabs {
+  width: 220px;
+  height: 44px;
+}
+
+.tabs__nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $c-white;
+  border-radius: $border-radius;
+}
+
+.tabs__nav-btn {
+  color: $c-default-dark;
+  font-size: 12px;
+  font-weight: $fw-medium;
+  border-radius: $border-radius;
+  border: none;
+  background-color: transparent;
+  padding: 13px 24px;
+  width: 110px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-active {
+  @include buttonBright;
+  box-shadow: 0px 6px 12px 0 $c-tick-bg;
+}
+
+.tabs__item {
+  display: none;
+}
+
+// ! Content
+.content-container {
+  margin: 0 auto;
+  position: relative;
+  background-color: $c-white-bg;
+  width: 100%;
+  max-width: 940px;
+  height: 475px;
+  border-radius: $border-radius;
+
+  @media screen and (min-width: 500px) and (max-width: 900px) {
+    height: 1500px;
+    max-width: 500px;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 1325px;
+    max-width: 500px;
+  }
+}
+
+.tabs__item {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  top: -26px;
+  width: 100%;
+  height: 100%;
+  padding-left: 38px;
+  padding-right: 45px;
+
+  @media screen and (min-width: 500px) and (max-width: 900px) {
+    top: 0;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 32px;
+    padding-bottom: 8px;
+  }
+}
+
+.active {
+  display: grid;
+  grid-template-columns: 262px 262px 292px;
+  gap: 34px;
+
+  @media screen and (min-width: 900px) and (max-width: 960px) {
+    gap: 5px;
+  }
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  padding: 67px 30px 20px;
+  width: 100%;
+  max-width: 292px;
+  height: 100%;
+  max-height: 474px;
+
+  border-radius: $border-radius;
+  transition: $transition;
+
+  @media screen and (min-width: 900px) and (max-width: 960px) {
+    max-width: 270px;
+    max-height: 450px;
+    padding: 50px 15px 20px;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 900px) {
+    max-width: 450px;
+    max-height: 440px;
+    align-items: center;
+    padding: 20px 15px 20px;
+  }
+
+  &:nth-child(1) {
+    @media screen and (max-width: 500px) {
+      max-width: 450px;
+      height: 100%;
+      max-height: 342px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 32px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &:nth-child(2) {
+    @media screen and (max-width: 500px) {
+      max-width: 450px;
+      height: 100%;
+      max-height: 374px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 0px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $c-default-dark;
+    box-shadow: 0px 42px 34px 0px $box-shadow;
+
+    @media screen and (max-width: 500px) {
+      max-width: 450px;
+      height: 100%;
+      max-height: 474px;
+      padding-left: 18px;
+      padding-right: 18px;
+      padding-top: 60px;
+    }
+
+    .btn-popular {
+      display: block;
+    }
+
+    .card__title,
+    .card__title-yearly {
+      color: $c-white;
+    }
+
+    .price,
+    .price-yearly {
+      color: $c-white;
+    }
+
+    .month,
+    .month-yearly {
+      color: $c-white;
+    }
+
+    .card__description,
+    .card__description-yearly {
+      color: $c-white;
+    }
+
+    li {
+      color: $c-white;
+    }
+
+    .icon {
+      background-color: $c-icon-bg;
+      fill: $c-white;
+    }
+
+    .content-flex {
+      margin-bottom: 24px;
+    }
+
+    .card__btn {
+      @include buttonBright;
+      width: 232px;
+
+      @media screen and (max-width: 900px) {
+        width: 270px;
+      }
+    }
+  }
+}
+
+.btn-popular {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: none;
+  background-color: $c-btn-popular;
+  color: $c-default-bright;
+  font-size: 10px;
+  font-weight: $fw-extra-bold;
+  border-radius: $border-radius;
+  width: 122px;
+  height: 28px;
+  border: none;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 500px) {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card__price-container {
+  display: flex;
+  align-items: end;
+  gap: 3px;
+  margin-bottom: 20px;
+}
+
+.price,
+.price-yearly {
+  color: $c-default-dark;
+  font-size: 36px;
+  font-weight: $fw-bold;
+}
+
+.month,
+.month-yearly {
+  color: $c-gray-text;
+  font-size: 18px;
+  font-weight: $fw-medium;
+  margin-bottom: 7px;
+}
+
+.card__title,
+.card__title-yearly {
+  color: $c-default-dark;
+  font-weight: $fw-medium;
+  font-size: 28px;
+  margin-bottom: 8px;
+  line-height: 26px;
+
+  @media screen and (max-width: 340px) {
+    margin-bottom: 14px;
+  }
+}
+
+.card__description,
+.card__description-yearly {
+  color: $c-gray-text;
+  font-weight: $fw-medium;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  color: $c-gray-text;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: $fw-medium;
+
+  @media screen and (max-width: 340px) {
+    margin-bottom: 10px;
+  }
+}
+
+.content-flex {
+  margin-bottom: 40px;
+}
+
+.button-flex {
+  height: 100%;
+  display: flex;
+  align-items: end;
+
+  @media screen and (max-width: 900px) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card__btn {
+  @include buttonDark;
+  width: 232px;
+  height: 45px;
+  color: $c-white;
+  font-weight: $fw-medium;
+  font-size: 16px;
+
+  @media screen and (min-width: 500px) and (max-width: 900px) {
+    width: 270px;
+  }
+}
+
+.icon {
+  fill: $c-tick;
+  background-color: $c-tick-bg;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  padding: 4px;
+}
